@@ -20,6 +20,8 @@ int main(){
         cout<< "The number of vowels "<< vowelsNumber(fileData)<<endl;
         cout<< "The number of words " << wordsNumber(fileData)<<endl;
         cout<< "The text in reverse " << reverseWords(fileData)<<endl;
+        cout<< "Second letter capitalized: "<< capitalizeSecondLetter(fileData)<<endl;
+
     }
     return 0;
 }
@@ -48,9 +50,11 @@ int wordsNumber(string text){
             num = true;
             counter ++;
         }
-    else
+    if(text[i] ==' '){
+
     num = false;
 
+    }
     }
     return counter;
 }
@@ -71,10 +75,34 @@ string reverseWords(string text){
     return sent + "\0";
 }
 string capitalizeSecondLetter(string text){
+
+
     string output = "";
+    bool num = false;
+    bool num2 = false;
+    bool num3 = true; //prevents capitalization of first letter
+    for(size_t i = 0; i < text.length(); i++){
 
-    for(int i = 0; i < text.length(); i++){
-        
+//checks if the first character is a word
+        if(text[i] !=' ' && num == false){
+            num = true;
+            num2 = true;
+            output = output + text[i];
+            num3 = false;
+            continue;
+        }
+        // checks if next character should be capitalized
+        if(num2 && text[i] !=' '){
+            output += toupper(text[i]);
+        num2 = false;
+        continue;
+        }
+
+        if(text[i]== ' '){
+            num = false;
+        }
+        output += text[i];
     }
-
+     
+return output;
 }
