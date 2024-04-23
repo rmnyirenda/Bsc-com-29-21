@@ -5,6 +5,7 @@ int main(){
     int firstValue ;
     int secondValue;
 
+//assigng a null value
     int* pPointer = nullptr;
      
      // assign pointer with address of firstvalue
