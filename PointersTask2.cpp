@@ -9,11 +9,11 @@ int main(){
      
      // assign pointer with address of firstvalue
      pPointer = &firstValue;
-     *pPointer = 10;
+     *pPointer = 10;//indirection
 
 //assign pointer with the address of secondvalue
-     pPointer = secondValue;
-     *pPointer = 20;
+     pPointer = &secondValue;
+     *pPointer = 20;//indirection
 
      cout<< "firstValue: "<< firstValue << '\n';
      cout<< "secondValue: "<< secondValue << '\n';
