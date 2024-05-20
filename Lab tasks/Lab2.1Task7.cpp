@@ -1,45 +1,49 @@
 #include "Lab2Task7.h"
 
-
-void Shapes :: Square:: SetsideLength(float mSideLength){
-    if(msideLength >0){
-        sideLength = mSideLength;
+void shapes :: Square:: SetsideLength(float sidelength){
+    if(sideLength >0){
+        this->sideLength = sidelength;
     }
 }
-float Shapes:: Square:: GetsideLength(){
+float shapes:: Square:: GetsideLength(){
     return sideLength;
 }
-float Shapes::Square::calculateAreaSquare(Square sideLength){
-    return Multiply(sideLength * sideLength);
+float shapes::Area::calculateAreaSquare(){
+    float sideLength;
+    return (sideLength * sideLength);
 }
-void Shapes:: Triangle:: Setbase(int SideBase){
-    if(sideBase >0){
-        base = SideBase;
+
+void shapes:: Triangle:: Setbase(int SideBase){
+    if(SideBase >0){
+        this->base = SideBase;
     }
 }
-int Shapes:: Triangle:: Getbase(){
+int shapes:: Triangle:: Getbase(){
     return base;
 }
 
-void Shapes:: Triangle:: Setheight(int SideHeight){
-    if(sideBase >0){
-        height = SideHeight;
+void shapes:: Triangle:: Setheight(int SideHeight){
+    if(SideHeight >0){
+        this->height = SideHeight;
     }
 }
-int Shapes:: Triangle:: Getheight(){
+int shapes:: Triangle:: Getheight(){
     return height;
 }
-int Shapes::Square::calculateAreaTriangle(Triangle base, Rectangle height){
-    return Multiply(base * height *0.5);
+int shapes::Area::calculateAreaTriangle(){
+    int base;
+    int height;
+    return (base* height *0.5);
 }
-void Shapes:: Circle:: Setradius(double mRadius){
-    if(mRadius >0){
-        radius = mRadius;
+void shapes:: Circle:: Setradius(double radius){
+    if(radius >0){
+        this->radius = radius;
     }
 }
-float Shapes:: Circle:: Getradiud(){
+double shapes:: Circle:: Getradius(){
     return radius;
 }
-float Shapes::Square::calculateAreaCircle(Circle radius){
-    return Multiply(3.14* radius * radius);
+double shapes::Area::calculateAreaCircle(){
+    double radius;
+    return (3.14 * radius * radius);
 }

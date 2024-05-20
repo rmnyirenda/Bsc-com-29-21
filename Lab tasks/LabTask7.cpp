@@ -9,12 +9,30 @@ int main(){
 Rectangle shape1;
 Rectangle shape2;
 
-shape1.SetLength();
+float length =0.0;
+float width = 0.0;
 
-shape1.SetWidth();
+cout<<"Enter the values of length :"<<endl;
+cin>> length ;
+shape1.SetLength(length);
+
+cout<<"Input the value of width"<<endl;
+cin>> width;
+shape1.SetWidth(width);
 
 shape1.CalculateArea();
 
-cout<<"The area of rectangle is: "<< shape1.GetLength()<<endl;
+cout<<"The area of rectangle for shape1 is: "<< shape1.CalculateArea()<<endl;
+
+shape2.CalculateArea();
+cout<<"Enter the values of length :"<<endl;
+cin>> length ;
+shape2.SetLength(length);
+
+cout<<"Input the value of width"<<endl;
+cin>> width;
+shape2.SetWidth(width);
+cout<<"The area of rectangle for shape2 is: "<<shape2.CalculateArea()<<endl;
+
 return 0;
 }

@@ -4,41 +4,34 @@ using namespace std;
 
 //constructor definition
 Rectangle :: Rectangle(){
-    length = 0;
-    width = 0;
+    length = 0.0f;
+    width = 0.0f;
 }
-Rectangle :: Rectangle(float newLength, float newWidth){
+Rectangle :: Rectangle(float length, float width){
+this->length = length;
+ this->width = width;
 
-    cout<<"Enter the value of length:"<<endl;
-    cin>>length;
-    length = newLength;
-
-    cout<<"Enter the value of widthth:"<<endl;
-    cin>>width;
-    width = newWidth;
 }
 //implementing accessor methods
-void Rectangle :: SetLength(float newLength){
-    cout<<"Input the value of length"<<endl;
-    cin>> length;
-    newLength = length;
+void Rectangle :: SetLength(float length){
+
+    this->length = length;
 
 }
 float Rectangle :: GetLength(){
     return length;
 }
 //implementing accessor methods
-void Rectangle :: SetWidth(float newWidth){
+void Rectangle :: SetWidth(float width){
 
-    cout<<"Input the value of width"<<endl;
-    cin>> width;
-    newWidth=width;
+
+    this->width=width;
 }
 float Rectangle :: GetWidth(){
     return width;
 }
 //implementing calculation of area
-float Rectangle :: CalculateArea(float a, float b){
+float Rectangle :: CalculateArea(){
   
     return (length * width);
 }

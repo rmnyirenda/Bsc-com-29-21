@@ -17,6 +17,6 @@ class Rectangle
     void SetLength(float newLength);
     float GetLength();
 
-    float CalculateArea(float length, float width);
+    float CalculateArea();
     ~Rectangle();
 };

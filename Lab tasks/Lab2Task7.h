@@ -3,13 +3,14 @@ namespace shapes{
     class Square{
         private:
         float sideLength;
+
         public:
 
-        Square();
         Square(float sideLength);
 
         void SetsideLength(float sideLength);
         float GetsideLength();
+        Square();
 
         ~Square();
     };
@@ -47,10 +48,10 @@ namespace shapes{
     };
     class Area {
         public:
-        static float calculateAreaSquare(Square area);
+        static float calculateAreaSquare();
 
-        static int calculateAreaTriangle(Triangle area);
+        static int calculateAreaTriangle();
 
-        static double calculateAreaCircle(Circle area);
+        static double calculateAreaCircle();
     };
 };
