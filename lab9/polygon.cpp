@@ -1,11 +1,13 @@
-
+#include <iostream>
 #include "polygon.h"
+
+using namespace std;
 
 void Polygon::SetValues(int width, int height){
     mWidth = width;
     mHeight = height;
 }
-int Polygon :: Area()
+void Polygon:: printArea()
 {
-    return 0;
+    cout << this ->Area() << '\n';
 }
